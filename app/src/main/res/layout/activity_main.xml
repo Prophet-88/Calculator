@@ -184,26 +184,28 @@
             <Button
                 android:id="@+id/button_1"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="@drawable/circle"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_margin="5dp"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/one" />
+                android:background="@drawable/circle"
+                android:onClick="button1"
+                android:text="@string/one"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button_2"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="@drawable/circle"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_margin="5dp"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/two" />
+                android:background="@drawable/circle"
+                android:onClick="button2"
+                android:text="@string/two"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button_3"
@@ -250,14 +252,15 @@
             <Button
                 android:id="@+id/button_0"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:background="@drawable/circle"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:layout_margin="5dp"
                 android:layout_width="0dp"
                 android:layout_height="70dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:text="@string/zero" />
+                android:background="@drawable/circle"
+                android:onClick="button0"
+                android:text="@string/zero"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button_decimal"
@@ -287,15 +290,20 @@
 
     </TableLayout>
 
-    <TextView
+    <EditText
         android:id="@+id/displayView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="@string/display"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:textSize="36sp"
+        android:textAlignment="textEnd"
+        tools:ignore="LabelFor"/>
 
     <ImageButton
         android:id="@+id/button_backspace"
