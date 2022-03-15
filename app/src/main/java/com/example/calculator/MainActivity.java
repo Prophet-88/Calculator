@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.os.Bundle;
 import android.widget.EditText;
+import org.mariuszgromada.math.mxparser.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +54,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void buttonEqual(View view){
+        String user_input = display.getText().toString();
 
+        user_input = user_input.replaceAll("÷", "/");
+        user_input = user_input.replaceAll("×","*");
+
+        Expression exp = new Expression(user_input);
+
+        String result = String.valueOf(exp.calculate());
+
+        display.setText(result);
+        display.setSelection(result.length());
     }
 
     public void buttonPlus(View view){
